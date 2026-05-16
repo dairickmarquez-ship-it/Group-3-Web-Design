@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crafty Classics | Products/Services</title>
+    <link rel="stylesheet" href="products.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-area">
+        <img src="pics/logo.jpg" alt="Logo" />
+        <span>Crafty Classics</span>
+      </div>
+
+      <nav>
+        <a href="index.html">Introduction</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html" class="active">Products/Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="products-container">
+      <h1 class="product-title" id="productTitle">Zia Flower Bouquet</h1>
+
+      <div class="carousel-wrapper">
+        <button class="side-btn" id="prevBtn">❮</button>
+
+        <div class="products-images-row" id="carouselRow">
+          <!-- Images inserted by JavaScript -->
+        </div>
+
+        <button class="side-btn" id="nextBtn">❯</button>
+      </div>
+
+      <a href="#" id="viewDetailsBtn" class="btn-black view-details-btn">
+        View Details
+      </a>
+    </main>
+
+    <footer>
+      <span>Handcrafted with Love</span>
+      <span>© 2026 Crafty Classics. All Rights Reserved.</span>
+    </footer>
+
+    <script>
+      const products = [
+        {
+          title: "Purple & Blue Bouquet",
+          image: "pics/flower 1.jpg",
+          link: "flower1.html",
+        },
+        {
+          title: "Accessories & Keychains",
+          image: "pics/flower 2.jpg",
+          link: "flower2.html",
+        },
+        {
+          title: "Zia Flower Bouquet",
+          image: "pics/flower 3.jpg",
+          link: "product detail.html",
+        },
+        {
+          title: "Flower Pots & Arrangements",
+          image: "pics/flower 4.jpg",
+          link: "flower4.html",
+        },
+        {
+          title: "Money Bouquet Sunflower",
+          image: "pics/flower 5.jpg",
+          link: "flower5.html",
+        },
+      ];
+
+      let currentIndex = 2;
+
+      const carouselRow = document.getElementById("carouselRow");
+      const productTitle = document.getElementById("productTitle");
+      const viewDetailsBtn = document.getElementById("viewDetailsBtn");
+
+      function updateCarousel() {
+        carouselRow.innerHTML = "";
+
+        for (let i = -2; i <= 2; i++) {
+          let index = (currentIndex + i + products.length) % products.length;
+
+          const product = products[index];
+
+          const box = document.createElement("div");
+
+          if (i === 0) {
+            box.className = "product-img-box center-img";
+          } else {
+            box.className = "product-img-box side-img";
+          }
+
+          box.innerHTML = `
+          <img src="${product.image}" alt="${product.title}">
+        `;
+
+          carouselRow.appendChild(box);
+        }
+
+        productTitle.textContent = products[currentIndex].title;
+        viewDetailsBtn.href = products[currentIndex].link;
+      }
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % products.length;
+        updateCarousel();
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + products.length) % products.length;
+        updateCarousel();
+      });
+
+      updateCarousel();
+    </script>
+  </body>
+</html>

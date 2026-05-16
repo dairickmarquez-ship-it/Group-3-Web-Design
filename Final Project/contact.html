@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crafty Classics | Contact Us</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-area">
+        <img src="pics/logo.jpg" alt="Logo" />
+        <span>Crafty Classics</span>
+      </div>
+      <nav>
+        <a href="index.html">Introduction</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products/Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="contact-container">
+      <div class="contact-col info-col">
+        <div class="banner-card">
+          <img
+            src="pics/banner.png"
+            alt="Crafting illustration"
+            class="banner-img"
+          />
+          <a
+            href="https://web.facebook.com/cminishop"
+            target="_blank"
+            class="fb-bar-link"
+          >
+            <div class="fb-bar">
+              <img src="pics/logo.jpg" alt="Profile" class="fb-logo" />
+              <span class="fb-name">Crafty Classics</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="details-card">
+          <div class="detail-item">
+            <img src="pics/location png.png" alt="Address" class="icon-img" />
+            <p>Purok 6 Street, Calicanto, Batangas, 4200, Philippines</p>
+          </div>
+          <div class="detail-item">
+            <img src="pics/contact.png" alt="Phone" class="icon-img" />
+            <p>0965 342 7250</p>
+          </div>
+          <!-- Clickable Facebook Link -->
+          <a
+            href="https://web.facebook.com/cminishop"
+            target="_blank"
+            class="fb-detail-link"
+          >
+            <div class="detail-item">
+              <img src="pics/fb .png" alt="Facebook" class="icon-img" />
+              <p>Crafty Classics</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-col form-col">
+        <div class="form-card">
+          <h2>Get In Touch</h2>
+          <h3>LEAVE US A MESSAGE/REVIEW</h3>
+
+          <!-- ✅ Working Form: sends to obcminishop@gmail.com -->
+          <form
+            action="https://formsubmit.co/obcminishop@gmail.com"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label>Message</label>
+              <textarea
+                name="message"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from Crafty Classics!"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <button type="submit" class="btn-black">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-col map-col">
+        <div class="map-card">
+          <!-- ✅ Embedded Map with EXACT PIN: Purok 6 St, Calicanto, Batangas -->
+          <iframe
+            class="map-img"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484.30366102995447!2d121.09321553610684!3d13.813241700000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd110035cfc327%3A0xf5e8d81735792248!2sSorosoro%20ibaba%20purok%205!5e0!3m2!1sen!2sph!4v1778656103457!5m2!1sen!2sph"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+
+          <h2>Location</h2>
+          <!-- ✅ View Maps opens EXACT pinned location -->
+          <a
+            href="https://www.google.com/maps/place/Purok+6+St,+Calicanto,+Batangas+City,+Batangas/@13.769443,121.0642438,17z"
+            target="_blank"
+            class="btn-black"
+          >
+            View Maps
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>Handcrafted with Love</span>
+      <span>© 2026 Crafty Classics. All Rights Reserved.</span>
+    </footer>
+  </body>
+</html>
